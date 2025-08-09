@@ -194,6 +194,7 @@ jobs:
   
       - name: Fix upstream bugs
         run: |
+          rm -rf target && echo "删除了target" || echo "无需删除"
           git add  . && git commit -m "auto commit"
           for i in "full_opt.patch" \
             "disable_scanner.patch"; do
